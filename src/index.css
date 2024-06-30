@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0;
+  background-color: hsl(0 0% 7%);
+  box-sizing: border-box;
+  @apply text-white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.popup {
+  background-image: linear-gradient(
+    45deg,
+    hsl(99deg 22% 53%) 0%,
+    hsl(134deg 24% 54%) 11%,
+    hsl(157deg 30% 51%) 22%,
+    hsl(171deg 37% 48%) 33%,
+    hsl(181deg 43% 47%) 44%,
+    hsl(189deg 45% 50%) 56%,
+    hsl(196deg 47% 54%) 67%,
+    hsl(203deg 47% 59%) 78%,
+    hsl(213deg 42% 63%) 89%,
+    hsl(227deg 34% 67%) 100%
+  );
+}
+
+/* input {
+  background-image: linear-gradient(
+    45deg,
+    hsl(240deg 24% 53%) 0%,
+    hsl(275deg 25% 55%) 11%,
+    hsl(311deg 28% 58%) 23%,
+    hsl(333deg 44% 66%) 34%,
+    hsl(349deg 61% 72%) 45%,
+    hsl(4deg 79% 77%) 57%,
+    hsl(17deg 94% 78%) 68%,
+    hsl(27deg 99% 79%) 79%,
+    hsl(39deg 95% 79%) 89%,
+    hsl(55deg 81% 81%) 100%
+  );
+} */
+
+.blurNavbar {
+  backdrop-filter: 10px grayscale(0.5) opacity(0.8) !important ;
+}
+
+.slider-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slider-content-left {
+  /* display: inline-block; */
+
+  animation: slideAnimationLeft 50s linear infinite;
+}
+
+@keyframes slideAnimationLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100%));
+  }
+}
+
+.slider-content-right {
+  /* display: inline-block; */
+
+  animation: slideAnimationRight 50s linear infinite;
+}
+@keyframes slideAnimationRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.floating-icons_container-background {
+  background-image: linear-gradient(
+    45deg,
+    hsl(218deg 99% 65%) 0%,
+    hsl(273deg 89% 75%) 26%,
+    hsl(318deg 100% 73%) 39%,
+    hsl(340deg 100% 74%) 50%,
+    hsl(17deg 100% 72%) 61%,
+    hsl(41deg 100% 63%) 74%,
+    hsl(55deg 100% 60%) 100%
+  );
+}
+
+.card_bg {
+  background-color: hsl(240 3.7% 15.9%);
+}
+
+.card_bg_link {
+  background-color: hsl(0, 0%, 76%);
+}
+
+.box_shadow {
+  box-shadow: 0px 0px 20px #262626;
+}
